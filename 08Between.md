@@ -24,11 +24,17 @@ For example, the following statement returns 1 because 15 is between 10 and 20:
 SELECT 15 BETWEEN 10 AND 20;
 ```
 
+Output:
+<img src="./images/BETWEEN.png" alt="" />
+
 The following example returns 0 because 15 is not between 20 and 30:
 
 ```sql
 SELECT 15 BETWEEN 20 AND 30;
 ```
+
+Output:
+<img src="./images/BETWEEN_NOT BETWEEN.png" alt="" />
 
 ---
 
@@ -60,6 +66,9 @@ For example, the following statement returns 0 because 15 is not between 10 and 
 SELECT 15 NOT BETWEEN 10 AND 20;
 ```
 
+Output:
+<img src="./images/BETWEEN_NOT BETWEEN AND.png" alt="" />
+
 In practice, you’ll use the BETWEEN operator in the WHERE clause of the SELECT, UPDATE, and DELETE statements.
 
 ## MySQL BETWEEN operator examples
@@ -88,6 +97,9 @@ WHERE
     buyPrice BETWEEN 90 AND 100;
 ```
 
+Output:
+<img src="./images/BETWEEN_WHERE.png" alt="" />
+
 This query uses the greater than or equal (>=) and less than or equal ( <= ) operators instead of the BETWEEN operator to get the same result:
 
 ```sql
@@ -100,6 +112,9 @@ FROM
 WHERE
     buyPrice >= 90 AND buyPrice <= 100;
 ```
+
+Output:
+<img src="./images/BETWEEN_OPERATOR.png" alt="" />
 
 To find the products whose buy prices are not between $20 and $100, you use the NOT BETWEEN operator as follows:
 
@@ -114,6 +129,9 @@ WHERE
     buyPrice NOT BETWEEN 20 AND 100;
 ```
 
+Output:
+<img src="./images/BETWEEN_NOT BETWEEN AND.png" alt="" />
+
 You can rewrite the query above using the less than (<), greater than (>), and the logical operator (AND) like this:
 
 ```sql
@@ -126,6 +144,9 @@ FROM
 WHERE
     buyPrice < 20 OR buyPrice > 100;
 ```
+
+Output:
+<img src="./images/BETWEEN_OR.png" alt="" />
 
 ### 2) Using MySQL BETWEEN operator with dates example
 
@@ -152,6 +173,9 @@ WHERE
      CAST('2003-01-01' AS DATE) AND
      CAST('2003-01-31' AS DATE);
 ```
+
+Output:
+<img src="./images/BETWEEN_CAST.png" alt="" />
 
 In this example, we use the CAST() to cast the literal string '2003-01-01' into a DATE value:
 
