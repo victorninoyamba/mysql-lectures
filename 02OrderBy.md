@@ -88,6 +88,9 @@ ORDER BY
 	contactLastname;
 ```
 
+Output:
+<img src="./images/OrderBy_ContactLastName.png" alt="" />
+
 If you want to sort customers by the last name in descending order, you use the DESC after the contactLastname column in the ORDER BY clause as shown in the following query:
 
 ```sql
@@ -99,6 +102,9 @@ FROM
 ORDER BY
 	contactLastname DESC;
 ```
+
+Output:
+<img src="./images/OrderBy_ContactLastName_Desc.png" alt="" />
 
 ### B) Using MySQL ORDER BY clause to sort the result set by multiple columns example
 
@@ -115,6 +121,8 @@ ORDER BY
 	contactFirstname ASC;
 ```
 
+Output:
+<img src="./images/OrderBy_ContactFirstName_ASC.png" alt="" />
 In this example, the ORDER BY clause sorts the result set by the last name in descending order first and then sorts the sorted result set by the first name in ascending order to make the final result set.
 
 ### C) Using MySQL ORDER BY clause to sort a result set by an expression example
@@ -132,6 +140,8 @@ ORDER BY
    quantityOrdered * priceEach DESC;
 ```
 
+Output:
+<img src="./images/OrderBy_Expression.png" alt="" />
 To make the query more readable, you can assign the expression in the SELECT clause a column alias and use that column alias in the ORDER BY clause as shown in the following query:
 
 ```sql
@@ -144,6 +154,8 @@ FROM
 ORDER BY subtotal DESC;
 ```
 
+Output:
+<img src="./images/OrderBy_Alias.png" alt="" />
 In this example, we use subtotal as the column alias for the expression quantityOrdered \* priceEach and sort the result set by the subtotal alias.
 
 Since MySQL evaluates the SELECT clause before the ORDER BY clause, you can use the column alias specified in the SELECT clause in the ORDER BY clause.
@@ -221,6 +233,9 @@ ORDER BY FIELD(status,
         'Shipped');
 ```
 
+Output:
+<img src="./images/OrderBy_Field.png" alt="" />
+
 ## MySQL ORDER BY and NULL
 
 In MySQL, NULL comes before non-NULL values. Therefore, when you the ORDER BY clause with the ASC option, NULLs appear first in the result set.
@@ -235,6 +250,9 @@ FROM
 ORDER BY reportsTo;
 ```
 
+Output:
+<img src="./images/OrderBy_Null.png" alt="" />
+
 However, if you use the ORDER BY with the DESC option, NULLs will appear last in the result set. For example:
 
 ```sql
@@ -244,6 +262,9 @@ FROM
     employees
 ORDER BY reportsTo DESC;
 ```
+
+Output:
+<img src="./images/OrderBy_LastNull.png" alt="" />
 
 ## Summary
 
