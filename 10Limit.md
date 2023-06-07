@@ -85,6 +85,9 @@ ORDER BY creditLimit DESC
 LIMIT 5;
 ```
 
+Output:
+<img src="./images/BETWEEN_NOT BETWEEN AND.png" alt="" />
+
 In this example:
 
 - First, the ORDER BY clause sorts the customers by credits in high to low.
@@ -103,6 +106,8 @@ ORDER BY creditLimit
 LIMIT 5;
 ```
 
+Output:
+<img src="./images/LIMIT_LOWEST.png" alt="" />
 In this example:
 
 - First, the ORDER BY clause sorts the customers by credits in low to high.
@@ -125,6 +130,9 @@ ORDER BY
 LIMIT 5;
 ```
 
+Output:
+<img src="./images/LIMIT_FIX BY ORDER BY.png" alt="" />
+
 ### 2) Using MySQL LIMIT clause for pagination
 
 When you display data on the screen, you often want to divide rows into pages, where each page contains a limited number of rows like 10 or 20.
@@ -140,6 +148,9 @@ FROM
     customers;
 ```
 
+Output:
+<img src="./images/LIMIT_COUNT ROWS.png" alt="" />
+
 Suppose that each page has 10 rows; to display 122 customers, you have 13 pages. The last 13th page contains two rows only.
 
 This query uses the LIMIT clause to get rows of page 1 which contains the first 10 customers sorted by the customer name:
@@ -154,6 +165,9 @@ ORDER BY customerName
 LIMIT 10;
 ```
 
+Output:
+<img src="./images/LIMIT_FIRST PAGE.png" alt="" />
+
 This query uses the LIMIT clause to get the rows of the second page that include rows 11 – 20:
 
 ```sql
@@ -166,6 +180,9 @@ ORDER BY customerName
 LIMIT 10, 10;
 ```
 
+Output:
+<img src="./images/LIMIT_SECOND PAGE.png" alt="" />
+
 ### 3) Using MySQL LIMIT to get the nth highest or lowest value
 
 To get the nth highest or lowest value, you use the following LIMIT clause:
@@ -176,6 +193,9 @@ FROM table_name
 ORDER BY sort_expression
 LIMIT n-1, 1;
 ```
+
+Output:
+<img src="./images/LIMIT_SECOND HIGHEST.png" alt="" />
 
 The clause LIMIT n-1, 1 returns 1 row starting at the row n.
 
@@ -192,6 +212,8 @@ For example, the following finds the customer who has the second-highest credit:
     LIMIT 1,1;
 ```
 
+Output:
+<img src="./images/LIMIT_LOWEST.png" alt="" />
 Let’s double-check the result. This query returns all customers sorted by credits from high to low:
 
 ```sql
@@ -203,6 +225,9 @@ FROM
 ORDER BY
     creditLimit DESC;
 ```
+
+Output:
+<img src="./images/LIMIT_CREDITLIMIT.png" alt="" />
 
 As you can see clearly from the output, the result was correct as expected.
 
@@ -221,6 +246,9 @@ WHERE
     state IS NOT NULL
 LIMIT 5;
 ```
+
+Output:
+<img src="./images/LIMIT_DISTINCT.png" alt="" />
 
 ## Summary
 
