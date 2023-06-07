@@ -104,8 +104,9 @@ FROM employees;
 
 Output:
 <img
-src="./images/Selec"
+src="./images/SelectAllColumnsC 2.png"
 alt=""
+/>
 
 The query returns data from all the columns of the employees table.
 
