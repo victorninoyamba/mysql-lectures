@@ -20,17 +20,26 @@ The logical AND operator returns 1 if both A and B are non-zero and NOT NULL. Fo
 SELECT 1 AND 1;
 ```
 
+Output:
+<img src="./images/AND.png" alt="" />
+
 The logical AND operator returns 0 if A or B is zero or both A and B are zero:
 
 ```sql
 SELECT 1 AND 0, 0 AND 1, 0 AND 0, 0 AND NULL;
 ```
 
+Output:
+<img src="./images/AND_1.png" alt="" />
+
 The logical AND operator returns NULL if either operand is non-zero or both operands are NULL.
 
 ```sql
 SELECT 1 AND NULL, NULL AND NULL;
 ```
+
+Output:
+<img src="./images/AND_NULL.png" alt="" />
 
 The following table illustrates the results of the AND operator when combining true, false, and null.
 
@@ -49,6 +58,9 @@ This is called short-circuit evaluation. In other words, the AND operator is sho
 ```sql
 SELECT 1 = 0 AND 1 / 0 ;
 ```
+
+Output:
+<img src="./images/AND_SHORT_CIRCUIT.png" alt="" />
 
 In this example, MySQL only evaluates the first part 1 = 0 of the expression 1 = 0 AND 1 / 0.
 
@@ -76,6 +88,9 @@ WHERE
     state = 'CA';
 ```
 
+Output:
+<img src="./images/AND_COUNTRY_AND_STATE.png" alt="" />
+
 By using the AND operator, you can combine more than two Boolean expressions. For example, the following query returns the customers who locate in California, USA, and have a credit limit greater than 100K.
 
 ```sql
@@ -91,6 +106,9 @@ WHERE
     state = 'CA' AND
     creditlimit > 100000;
 ```
+
+Output:
+<img src="./images/AND_TWO_BOOLEAN.png" alt="" />
 
 ## Summary
 
