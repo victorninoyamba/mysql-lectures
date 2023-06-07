@@ -50,6 +50,9 @@ WHERE
     jobtitle = 'Sales Rep';
 ```
 
+Output:
+<img src="./images/Where.png" alt="Employees Table" />
+
 In this example, the SELECT statement examines all rows of the employees table and selects only rows whose values in the jobTitle column are Sales Rep.
 
 ## 2) Using MySQL WHERE clause with the AND operator
@@ -75,6 +78,8 @@ In this example, the expression in the WHERE clause uses the AND operator to com
 jobtitle = 'Sales Rep' AND officeCode = 1;
 ```
 
+Output:
+<img src="./images/Where_AND.png" alt="Employees Table" />
 The AND operator evaluates to TRUE only if both expressions evaluate to TRUE. Therefore, the query returns rows whose values in the jobTitle column is Sales Rep and officeCode is 1.
 
 ## 3) Using MySQL WHERE clause with OR operator
@@ -103,6 +108,9 @@ The OR operator evaluates to TRUE only if one of the expressions evaluates to TR
 jobtitle = 'Sales Rep' OR officeCode = 1
 ```
 
+Output:
+<img src="./images/Where_OR.png" alt="Employees Table" />
+
 Therefore, the query returns any employee who has the job title Sales Rep or office code 1.
 
 ## 4) Using MySQL WHERE clause with the BETWEEN operator example
@@ -129,6 +137,9 @@ WHERE
 ORDER BY officeCode;
 ```
 
+Output:
+<img src="./images/Where_BETWEEN.png" alt="Employees Table" />
+
 ## 5) Using MySQL WHERE clause with the LIKE operator example
 
 The LIKE operator evaluates to TRUE if a value matches a specified pattern.
@@ -148,6 +159,9 @@ WHERE
 ORDER BY firstName;
 ```
 
+Output:
+<img src="./images/Where_LIKE.png" alt="Employees Table" />
+
 ## 6) Using MySQL WHERE clause with the IN operator example
 
 The IN operator returns TRUE if a value matches any value in a list.
@@ -156,6 +170,8 @@ The IN operator returns TRUE if a value matches any value in a list.
 value IN (value1, value2,...)
 ```
 
+Output:
+<img src="./images/Where_IN.png" alt="Employees Table" />
 The following example uses the WHERE clause with the IN operator to find employees who locate in the office with office code 1.
 
 ## 7) Using MySQL WHERE clause with the IS NULL operator
@@ -185,6 +201,9 @@ WHERE
     reportsTo IS NULL;
 ```
 
+Output:
+<img src="./images/Where_IS_NULL.png" alt="Employees Table" />
+
 ## 8) Using MySQL WHERE clause with comparison operators
 
 The following table shows the comparison operators that you can use to form the expression in the WHERE clause.
@@ -211,6 +230,8 @@ WHERE
     jobtitle <> 'Sales Rep';
 ```
 
+Output:
+<img src="./images/WHERE_NOT_EQUAL_TO.png" alt="Employees Table" />
 The following query finds employees whose office code is greater than 5
 
 ```sql
@@ -224,6 +245,9 @@ WHERE
     officecode > 5;
 ```
 
+Output:
+<img src="./images/WHERE_GREATER_THAN.png" alt="Employees Table" />
+
 The following query returns employees with office code less than or equal to 4 (<=4):
 
 ```sql
@@ -236,6 +260,9 @@ FROM
 WHERE
     officecode <= 4;
 ```
+
+Output:
+<img src="./images/WHERE_LessThanOrEqualTo.png" alt="Employees Table" />
 
 ## Summary
 
