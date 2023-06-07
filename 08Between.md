@@ -80,7 +80,7 @@ Let’s practice with some examples of using the BETWEEN operator.
 See the following products table in the sample database:
 
 <img
-  src="./images/products.png"
+  src="./images/products table.png"
   alt=""
 />
 
