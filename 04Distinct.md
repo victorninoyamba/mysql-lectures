@@ -74,6 +74,9 @@ SELECT DISTINCT state
 FROM customers;
 ```
 
+Output:
+<img src="./images/DISTINCT_state.png" alt="" />
+
 ## MySQL DISTINCT with multiple columns
 
 When you specify multiple columns in the DISTINCT clause, the DISTINCT clause will use the combination of values in these columns to determine the uniqueness of the row in the result set.
@@ -92,6 +95,8 @@ ORDER BY
     city;
 ```
 
+Output:
+<img src="./images/DISTINCT_SelectDistinct_IsNotNull.png" alt="" />
 Without the DISTINCT clause, you will get the duplicate combination of state and city as follows:
 
 ```sql
@@ -105,6 +110,9 @@ ORDER BY
     state ,
     city;
 ```
+
+Output:
+<img src="./images/DISTINCT_WITHOUT_DISTINCT.png" alt="" />
 
 ## Summary
 
