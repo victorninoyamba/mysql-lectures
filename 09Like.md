@@ -47,6 +47,9 @@ WHERE
     firstName LIKE 'a%';
 ```
 
+Output:
+<img src="./images/LIKE_STARTS WITH.png" alt="" />
+
 In this example, MySQL scans the whole employees table to find employees whose first names start with the letter a and are followed by any number of characters.
 
 This example uses the LIKE operator to find employees whose last names end with the literal string on e.g., Patterson, Thompson:
@@ -61,6 +64,9 @@ FROM
 WHERE
     lastName LIKE '%on';
 ```
+
+Output:
+<img src="./images/LIKE_ENDS WITH.png" alt="" />
 
 To check if a string contains a substring, you can use the percentage ( % ) wildcard at the beginning and the end of the substring.
 
@@ -77,6 +83,9 @@ WHERE
     lastname LIKE '%on%';
 ```
 
+Output:
+<img src="./images/LIKE_CONTAINS BETWEEN.png" alt="" />
+
 ### B) Using MySQL LIKE operator with underscore( \_ ) wildcard examples
 
 To find employees whose first names start with the letter T , end with the letter m, and contain any single character between e.g., Tom , Tim, you use the underscore (\_) wildcard to construct the pattern as follows:
@@ -91,6 +100,9 @@ FROM
 WHERE
     firstname LIKE 'T_m';
 ```
+
+Output:
+<img src="./images/LIKE_UNDERSCORE.png" alt="" />
 
 ### C) Using MySQL NOT LIKE operator example
 
@@ -108,6 +120,9 @@ FROM
 WHERE
     lastName NOT LIKE 'B%';
 ```
+
+Output:
+<img src="./images/LIKE_NOT LIKE.png" alt="" />
 
 ---
 
@@ -139,6 +154,8 @@ WHERE
     productCode LIKE '%\_20%';
 ```
 
+Output:
+<img src="./images/LIKE_DEFAULT ESCAPE.png" alt="" />
 Alternatively, you can specify a different escape character e.g., $ using the ESCAPE clause:
 
 ```sql
@@ -151,6 +168,8 @@ WHERE
     productCode LIKE '%$_20%' ESCAPE '$';
 ```
 
+Output:
+<img src="./images/LIKE_ESCAPE.png" alt="" />
 The pattern %$\_20% matches any string that contains the \_20 string.
 
 ## Summary
