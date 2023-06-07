@@ -90,6 +90,11 @@ SELECT employeeNumber,
 FROM   employees;
 ```
 
+Output:
+<img
+  src="./SelectAllColumnsC.png"
+  alt=""
+/>
 Alternatively, you can use the asterisk (\*) which is the shorthand for all columns. For example:
 
 ```sql
