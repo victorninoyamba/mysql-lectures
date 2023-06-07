@@ -92,7 +92,7 @@ FROM   employees;
 
 Output:
 <img
-  src="./SelectAllColumnsC.png"
+  src="./images/SelectAllColumnsC.png"
   alt=""
 />
 Alternatively, you can use the asterisk (\*) which is the shorthand for all columns. For example:
@@ -101,6 +101,11 @@ Alternatively, you can use the asterisk (\*) which is the shorthand for all colu
 SELECT *
 FROM employees;
 ```
+
+Output:
+<img
+src="./images/SelectAllColumnsC 2.png"
+alt=""
 
 The query returns data from all the columns of the employees table.
 
